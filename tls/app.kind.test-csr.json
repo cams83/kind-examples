@@ -1,0 +1,16 @@
+{
+  "CN": "app.kind.test",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "BR",
+      "ST": "MG",
+      "L": "Belo Horizonte",
+      "O": "CAMs7",
+      "OU": "Development"
+    }
+  ]
+}

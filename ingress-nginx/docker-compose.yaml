@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  haproxy:
+    image: haproxy:alpine3.14
+    container_name: haproxy
+    sysctls:
+      - net.ipv4.ip_unprivileged_port_start=0
+    restart: unless-stopped
+    volumes:
+      - ${PWD}/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+      - ${PWD}/certs:/certs
+    ports:
+      - "80:80"
+      - "443:443"
+    extra_hosts:
+      - "k8s.ingress.local:YOUR_IP_ADDRESS"   
+    networks:
+      - kind
+
+networks:
+  kind:
+    external: true
