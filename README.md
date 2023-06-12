@@ -1,12 +1,14 @@
 # Step by step to run all Kind tests
 
-This tutorial was tested on a machine with the Ubuntu 22.04.2 LTS operating system. To follow this tutorial, you need the following tools: `git`, `docker`, `docker-compose` and `kind`.
+This tutorial was tested on a machine with the Ubuntu 22.04.2 LTS operating system. To follow this tutorial, you need the following tools: `git`, `docker`, `docker-compose`, `kubectl` and `kind`.
 
 >If `git` isn't installed, install it through the [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) tutorial.
 
 >If `docker` isn't installed, install it through the [Install Docker Engine](https://docs.docker.com/engine/install/ubuntu/) tutorial.
 
 >If `docker-compose` isn't installed, install it through the [Install Docker Compose](https://docs.docker.com/compose/install/standalone/) tutorial.
+
+>If `kubectl` isn't installed, install it through the [Installation](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) tutorial.
 
 >If `kind` isn't installed, install it through the [Installation](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) tutorial.
 
@@ -25,6 +27,10 @@ docker --version
 docker-compose --version
 ```
 >Docker Compose version v2.18.1
+
+```bash
+kubectl version --output=yaml
+```
 
 ```bash
 kind --version
